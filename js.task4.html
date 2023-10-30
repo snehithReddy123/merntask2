@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center; padding-top: 150px">
+    <div style="border: 1px solid black; width:300px;margin-left:600px;border-radius: 10px;background-color:rgb(0, 255, 255)">
+    <input type="button" value="show date" onclick="date()"><br>
+    <span id="dat"> </span><br>
+    <input type="button" value="show Time" onclick="Time()"><br>
+    <span id="tim"> </span>
+    
+    <script>
+        function date(){
+        var x = new Date();
+        var dd=x.getDate();
+        var mo=x.getMonth();
+        var mm=mo;
+        var months= ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+        var mon = months[mm];
+        var yy = x.getFullYear();
+        document.getElementById("dat").innerHTML= dd+"/" + mon +"/"+yy;
+        
+       }
+       function Time(){
+        var y = new Date();
+      
+        document.getElementById("tim").innerHTML= y;
+       }
+      
+
+        </script>
+        </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color:red;
+        }
+        .bg{
+            background-color: rgb(0,255,255);
+            padding:30px;
+        }
+        </style>
+</head>
+<center>
+<body class="bg">
+    <form action ="https://www.google.com/" method="get" onsubmit="return func()" name="f1">
+      
+
+    <table style="background-color:rgb(230, 239, 239);width: 1000; padding-left: 50px;padding-right: 50px;padding-bottom: 50px;">
+
+        <tr><th></th><th><h1 style=" padding-right: 100px; ">Registration form</h1></th></tr>
+      
+       <tr> <td style="font-weight: bold;">First Name </td><td style="padding-top: 10px;"><input type="text" name="fn" style="width: 400px;"><span id="a"></span><td></tr>
+        <tr> <td style="font-weight: bold;">Last Name </td><td style="padding-top: 10px;"><input type="text" name="ln" style="width: 400px;"><span id="b"></span><td></tr>
+       <tr> <td style="font-weight: bold;">Email </td><td style="padding-top: 10px;"><input type="email" name="em" style="width: 400px;"><span id="c"></span><td></tr>
+      <tr> <td style="font-weight: bold;"> Password</td><td style="padding-top: 10px;"> <input type="password" name="pw" style="width: 400px;"><span id="d"></span><td></tr>
+    <tr> <td style="font-weight: bold;">Re-enter Password</td><td style="padding-top: 10px;"> <input type="password" name="rpw" style="width: 400px;"><span id="e"></span><td></tr>
+        <tr> <td style="font-weight: bold;">Gender</td> <td style="padding-top: 10px;"><input type="radio" name="y">male<br>
+        <input type="radio" name="y">Female</td>
+        <tr> <td style="font-weight: bold;"> Age</td><td style="padding-top: 10px;"> <input type="number" name="age" style="width: 400px;"><span id="f"></span></td></tr>
+            <tr> <td style="font-weight: bold;">  Phone Number</td><td style="padding-top: 10px;"> <input type="number" name="phno" style="width: 400px;"><span id="g"></span</td></tr>
+                <tr> <td style="font-weight: bold;">Address</td><td style="padding-top: 10px;"> <textarea rows="5" cols="53" name="add"></textarea></td><td style="padding-right: 50px;"><span id="h"></span></td></tr>
+                    <tr> <td style="font-weight: bold;"> State</td><td style="padding-top: 10px;"><input type="text" name="state" style="width: 400px;"><span id="i"></span></td></tr>
+       <tr> <td style="font-weight: bold;">Country </td><td style="padding-top: 10px;"><select name="country">
+            
+            <option>Choose your country</option>
+            <option>INDIA</option>
+            <option>PAKISTAN</option>
+            <option>MALAYSIA</option>
+            <option>USA</option>
+            <option>UK</option>
+
+            </select></td></tr>
+        <tr><td style="font-weight: bold;"> Languages known</td><td style="padding-top: 10px;"> <input type="checkbox"> English   <input type="checkbox">Kannada <input type="checkbox">Hindi <input type="checkbox">Telugu</td></tr>
+        <tr><td style="padding-top: 10px;">  <input type="checkbox">Here I declare all the given are true</td></tr>
+        <tr><td></td> <td style="padding-top: 10px;">Log in to<a href="#">Ethnus</a>Website</td></tr>
+        <tr> <td></td><td style="padding-top: 10px;"><input type="submit" value="REGISTER" style="border-radius: 10px; text-decoration: underline; background-color: red;color:white" ><td></tr>
+
+   
+    </table>
+    
+</form>
+<script>
+    function func(){
+        var fna =document.f1.fn.value;
+        var lna =document.f1.ln.value;
+        var ema =document.f1.em.value;
+        var pww =document.f1.pw.value;
+        var rpww =document.f1.rpw.value;
+        var ag= document.f1.age.value;
+        var ph =document.f1.phno.value;
+        var ad=document.f1.add.value;
+        var st =document.f1.state.value;
+        if(fna=="" || fna=="null" || lna=="" || lna=="null"||ema=="" || ema=="null" || pww=="" || pww=="null" ||rpww!=pww ||ag=="" || ag=="null" ||ph.length<10 || ph.length>10 || ph=="" || ph=="0"||ad=="" || ad=="null"||st=="" || st=="null"){
+            document.getElementById("a").innerHTML="POOR";
+            document.getElementById("b").innerHTML="POOR";
+            document.getElementById("c").innerHTML="POOR";
+            document.getElementById("d").innerHTML="POOR";
+            document.getElementById("e").innerHTML="POOR OR MISMATCH";
+            document.getElementById("f").innerHTML="POOR";
+            document.getElementById("g").innerHTML="POOR";
+            document.getElementById("h").innerHTML="POOR";
+            document.getElementById("i").innerHTML="POOR";
+            return false;
+                
+        }
+  
+     
+        }
+    
+    
+    </script>
+</body>
+</center>
+</html>

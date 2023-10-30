@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            margin: 10px;
+        }
+        textarea{
+            margin:10px
+
+        }
+        table{
+            border:1px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<center>
+<body style="padding-top: 150px;">
+    <table>
+    <form action="https://www.google.com/maps" method="post" onsubmit="return nam()" name="f2">
+       <tr><td>Name:</td> <td><input type="text" name="fname"  pattern="[a-zA-Z ]{2,}" ><span id="na"></span><td></tr>
+        <tr><td>Email: </td> <td><input type="email" name="email" > <span id="em"></span><td></tr>
+            <tr><td> Website: </td> <td><input type="text" name="web" > <span id="ws"></span><td></tr>
+                <tr><td> Message:</td> <td><textarea rows="3" col="10" name="mess"></textarea> <span id="mes"></span></td></tr>
+       <tr><td> <input type="submit" ></td></tr>
+        </form>
+    </table> 
+    <script >
+        function nam(){
+            var n=document.f2.fname.value;
+            var m=document.f2.email.value;
+            var o =document.f2.web.value;
+            var p=document.f2.mess.value;
+            
+            if(n=="null" || n==""){
+                document.getElementById("na").innerHTML="  This feild is required";
+                return false;
+
+            }
+            if(m=="null" || m==""){
+                document.getElementById("em").innerHTML="  A valid email address is required";
+                return false;
+
+            }
+            if(o=="null" || o==""|| o.substr(0,2)!="w" ||o.charAt(3)!="."|| o.charAt(o.length-3)!="."){
+                document.getElementById("ws").innerHTML="  A valid url is required";
+                return false;
+
+            }
+            if(p=="null" || p==""){
+                document.getElementById("mes").innerHTML="  This field is required";
+                return false;
+
+            }
+        }
+
+    </script>
+</body>
+</center>
+</html>
